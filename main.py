@@ -52,7 +52,7 @@ def home():
             total = (total + mensual) * (1 + tasa_mensual)
         resultado = "{:,.2f}".format(total)
 
-return HTML_TEMPLATE.replace('{% if resultado %}', '').replace('{% endif %}', '').replace('{{ resultado }}', str(resultado) if resultado else '').replace('{{ anios }}', str(anios) if anios else '')
+return HTML_TEMPLATE.replace('{% if resultado %}', '').replace('{% endif %}', '').replace('{{ resultado }}', str(resultado) if resultado is not None else '').replace('{{ anios }}', str(anios) if anios is not None else '')
 
     
 if __name__ == "__main__":
