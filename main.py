@@ -7,9 +7,11 @@ HTML_TEMPLATE = """
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2128092512096294" crossorigin="anonymous"></script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Compound Interest Calculator - Grow Your Wealth</title>
+    <title>Compound Interest Calculator - Financial Tools</title>
     <style>
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; background-color: #f8f9fa; }
         .card { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); margin-bottom: 30px; }
@@ -33,13 +35,13 @@ HTML_TEMPLATE = """
         <p style="text-align:center; color: #666;">Plan your financial future with compound interest.</p>
         <form method="POST">
             <label>Initial Investment ($)</label>
-            <input type="number" name="inicial" value="1000" required title="Amount of money you start with">
+            <input type="number" name="inicial" value="1000" required>
             <label>Monthly Contribution ($)</label>
-            <input type="number" name="mensual" value="100" required title="Amount you add every month">
+            <input type="number" name="mensual" value="100" required>
             <label>Years of Growth</label>
-            <input type="number" name="anios" value="10" required title="How long you will invest">
+            <input type="number" name="anios" value="10" required>
             <label>Annual Interest Rate (%)</label>
-            <input type="number" step="0.1" name="tasa" value="8" required title="Expected annual return">
+            <input type="number" step="0.1" name="tasa" value="8" required>
             <button type="submit">Calculate My Future</button>
         </form>
         
@@ -54,7 +56,7 @@ HTML_TEMPLATE = """
             <h2>Frequently Asked Questions</h2>
             <div class="faq-item">
                 <p class="faq-question">Why is the monthly contribution important?</p>
-                <p>Even small monthly additions can significantly increase your final balance over time due to compounding.</p>
+                <p>Small monthly additions can significantly increase your final balance over time due to compounding effect.</p>
             </div>
             <div class="faq-item">
                 <p class="faq-question">Is an 8% return realistic?</p>
