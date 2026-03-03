@@ -51,8 +51,12 @@ def home():
         for _ in range(anios * 12):
             total = (total + mensual) * (1 + tasa_mensual)
         resultado = "{:,.2f}".format(total)
-        
-    return HTML_TEMPLATE.replace('{% if resultado %}', '' if resultado else '').replace('{{ resultado }}', str(resultado) if resultado else '').replace('{{ anios }}', str(anios) if anios else '')
 
-if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+return HTML_TEMPLATE.replace('{% if resultado %}', '').replace('{% endif %}', '').replace('{{ resultado }}', str(resultado) if resultado else '').replace('{{ anios }}', str(anios) if anios else '')
+
+    
+if __name__ == "__main__":
+    import os
+    port = int(os.environ.get("PORT", 10000))
+    app.run(host='0.0.0.0', port=port)
+
